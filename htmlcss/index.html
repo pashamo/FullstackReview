@@ -1,9 +1,139 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>HTML Dump</title>
-    </head>
-    <body>
-        <h1></h1>
-    </body>
+
+<head>
+    <title>HTML Dump</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1 id="top">Heading 1 of 6</h1>
+    <h2>Heading 2 of 6</h2>
+    <h3>Heading 3 of 6</h3>
+    <h4>Heading 4 of 6</h4>
+    <h5>Heading 5 of 6</h5>
+    <h6>Heading 6 of 6</h6>
+    <p>Paragraph, always forms on a new line</p>
+    <p>To make <b>bold</b></p>
+    <p>To make <i>italics</i></p>
+    <p>To make <strong>strong</strong></p>
+    <p>To make <em>emphasis</em></p>
+    <p>To make <sup>superscript</sup></p>
+    <p>To make <sub>subscript</sub></p>
+    <p>To break line manually add a <em>br</em> empty element</p>
+    <p>To add horizontal line manually add a <em>hr</em> empty element</p>
+    <p>blockquote <q>q</q> <abbr title="Abbreviation">ABBR</abbr> cite dfn address ins/del <s>strikethrough</s></p>
+
+    <hr />
+
+    <ul>
+        <li>Unordered Lists
+            <ul>
+                <li>Nested lists are allowed</li>
+            </ul>
+        </li>
+        <li>Ordered Lists
+            <ul>
+                <li>Nested lists are allowed</li>
+            </ul>
+        </li>
+        <li>Definition Lists<dl>
+                <dt>Terms</dt>
+                <dd>Definition of the terms in a definition list</dd>
+            </dl>
+        </li>
+    </ul>
+
+    <hr />
+
+    <h3>Links</h3>
+    <p>You create an <q>a</q> element, and use the href attribute to link to an absolute or relative <abbr
+            title="Unified Resource Locator">URL</abbr>.</p>
+    <p><a href="https://www.taqwa.ca" target="_blank">Taqwa Academy</a> &#40;opens in a new window&#41;</p>
+
+    <hr />
+
+    <p>the img element carries two attributes, src and alt. src provides a source of the image for the browser to load.
+        the alt provides a description of the image. title may be used to provide additional details which can be viewed
+        as a tooltip on hover. Stick to JPEG for multiple colours, PNG for few colours, and vector graphics for
+        maintaining clarity with graphics which are not affected by resizing</p>
+    <figure><img src="https://images.pexels.com/photos/33580747/pexels-photo-33580747.jpeg" alt="A door in a compound"
+            title="Marrakech, Marrakech-Safi, Fas" width="20%" /><img
+            src="https://images.pexels.com/photos/33580747/pexels-photo-33580747.jpeg" alt="A door in a compound"
+            title="Marrakech, Marrakech-Safi, Fas" width="20%" />
+        <figcaption>Sample caption about this picture</figcaption>
+    </figure>
+
+    <hr />
+
+    <p>For tables, we have tags: table, thead, tbody, tfoot, tr, th, td</p>
+<table>
+    <thead>
+        <tr><th></th><th scope="col">9am</th><th scope="col">10am</th><th scope="col">11am</th><th scope="col">12pm</th></tr>
+    </thead>
+    <tbody>
+<tr><th scope="row">Monday</th><td colspan="2">Geography</td><td>Math</td><td rowspan="2">Science</td></tr>
+<tr><th scope="row">Tuesdayday</th><td>Home Ec</td><td colspan="2">Gym</td></tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td></td>
+            <td>something</td>
+            <td>something</td>
+            <td>something</td>
+            <td>something</td>
+        </tr>
+        
+    </tfoot>
+</table>
+
+<hr />
+
+<h3>Forms</h3>
+<p>Form element always carries the action, method and id attributes. Methods of GET or POST. Use GET for short forms, just retreiving database information. Use POST for large forms, passwords, files and sensitive data. Get attaches the keys and values to the emd of the URL, POST sends the data in a HTTP header.</p>
+
+<form action="" method="GET" id="myform">
+    <fieldset>
+        <legend>Sample form</legend>
+        <label>username: <input type="text" name="fullname" maxlength="30" required/></label><br />
+        <label for="password">password:</label>
+        <input type="password" name="password" id="password" maxlength="30" /><br/>
+        <label>Date: <input type="date" name="textarea" cols="20" rows="4"/></label>
+        <p>Search: <input type="search" name="search" placeholder="Enter keyword"></p>
+        <p>day:
+            <input type="radio" name="dayradio" value="monday" checked/> Monday
+            <input type="radio" name="dayradio" value="wednesday"/> Wednesday
+            <input type="radio" name="dayradio" value="friday"/> Friday
+        </p>
+        <p>flavours:
+            <input type="checkbox" name="flachek" value="vanilla"/> Vanilla
+            <input type="checkbox" name="flachek" value="chocolate"/> Chocolate
+            <input type="checkbox" name="flachek" value="banana"/> Banana
+        </p>
+        <p>List of things:
+        <select name="listofthings">
+            <option value=""></option>
+            <option value="one">1</option>
+            <option value="two">2</option>
+            <option value="three">3</option>
+        </select></p>
+        <p>List of things2:
+        <select name="listofthings2" multiple>
+            <option value=""></option>
+            <option value="one">1</option>
+            <option value="two">2</option>
+            <option value="three">3</option>
+        </select></p>
+        <p>Upload file: <input type="file" name="userfile"/></p>
+        <input type="image" src="https://www.kindpng.com/picc/m/741-7412266_submit-button-png-transparent-png.png" width="100px" />
+        <input type="submit" name="submit" value="submit"/>
+    </fieldset>
+</form>
+
+    <hr />
+
+    <p><a href="#top">Top</a></p>
+
+</body>
+
 </html>
